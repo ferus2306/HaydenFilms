@@ -1,27 +1,45 @@
 import { MDBCol, MDBRow, MDBTypography } from 'mdbreact';
 import { MDBMedia, MDBIcon } from 'mdbreact';
 import React from 'react';
-import trailer from '../assets/video/trailer.mp4'
+// import trailer from '../assets/video/trailer.mp4'
+// import iron from '../assets/video/iron.mp4'
+import Plyr from 'plyr-react'
+import 'plyr-react/dist/plyr.css'
 
 const MovieDetails = () => {
     return (
-        <MDBRow className="pt-4" center>
+        <MDBRow className="pt-4">
+            
+            <MDBCol sm="12">
+                <MDBTypography variant="display-4" className="text-center">TITLE</MDBTypography>
+            </MDBCol>
             {/* VIDEO */}
-            <MDBCol sm="12" md="4">
-                <video className="" width="100%" height="100%" controls>
-                    <source src={trailer} type="video/mp4"></source>
+            <MDBCol sm="12" md="5">
+                {/* <video className="" width="100%" height="260px" controls>
+                    <source src={iron} type="video/mp4"></source>
                     <source src="movie.ogg" type="video/ogg"></source>
                     Your browser does not support the video tag.
-                </video>
+                </video> */}
+
+                <Plyr 
+                    type="youtube" // or "vimeo"
+                    videoId='https://www.youtube.com/watch?v=osSJhXruEzU' />
             </MDBCol>
 
             {/* DESCRIPTION */}
-            <MDBCol sm="" md="8">
-                <MDBTypography>DESCRIPTION</MDBTypography>
+            <MDBCol sm="" md="7">
+                <p>
+                    When history tells the story of the Marvel Cinematic Universe, 
+                    the tale will always begin with the introduction of Tony Stark (Robert Downey Jr.) in Jon Favreau's Iron Man. 
+                    An engineering prodigy and genius who follows in his father's footsteps to run the world's biggest weapons manufacturer, 
+                    Tony is first presented as a careless playboy only interested in making money. That all changes, however, when he is kidnapped 
+                    by a deadly terrorist organization demanding his technology. With the help of a fellow hostage, Ho Yinsin (Shaun Toub), 
+                    he uses his ingenuity to design a suit of armor to escape... but it's an experience that winds up haunting him.
+                </p>
             </MDBCol>
 
             {/* OTHER */}
-            <MDBCol className="py-4" sm="12" md="6">
+            <MDBCol className="py-4" sm="12" md="5">
                 <MDBTypography>
                     <MDBMedia list className="mt-3">
                     <MDBMedia tag="li">

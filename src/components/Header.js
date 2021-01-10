@@ -1,6 +1,8 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView} from
-"mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView } from "mdbreact";
+import mulan from '../assets/images/mulan.jpg'
+import war from '../assets/images/war.jpg'
+import marvel from '../assets/images/marvelheroes.jpg'
 
 const Header = () => {
   return (
@@ -17,7 +19,7 @@ const Header = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
+                src={marvel}
                 alt="First slide"
               />
             </MDBView>
@@ -26,7 +28,7 @@ const Header = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+                src={war}
                 alt="Second slide"
               />
             </MDBView>
@@ -35,7 +37,7 @@ const Header = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                src={mulan}
                 alt="Third slide"
               />
             </MDBView>
