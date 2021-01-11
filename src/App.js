@@ -12,11 +12,9 @@ function App() {
 
     <Router>
       <div className="App">
-        
           <Route exact path='/' component={Dashboard}></Route>
-          <Route path='/details/' component={MovieDetails}></Route>
-          <Route path='/details/:id' component={MovieDetails}></Route>
-        
+          <Route exact path='/details/' component={MovieDetails}></Route>
+          
         <Footer />
       </div>
     </Router>
