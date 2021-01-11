@@ -1,17 +1,24 @@
 import { MDBCol, MDBRow, MDBTypography } from 'mdbreact';
-import { MDBMedia, MDBIcon } from 'mdbreact';
+import { MDBMedia, MDBIcon, MDBView, MDBMask } from 'mdbreact';
 import React from 'react';
 // import trailer from '../assets/video/trailer.mp4'
 // import iron from '../assets/video/iron.mp4'
 import Plyr from 'plyr-react'
 import 'plyr-react/dist/plyr.css'
+import Navbar from './Navbar'
+import mulan from '../assets/images/mulan.jpg'
+import war from '../assets/images/war.jpg'
+import marvel from '../assets/images/marvelheroes.jpg'
 
 const MovieDetails = () => {
     return (
-        <MDBRow className="pt-4">
+        <div>
+        <Navbar />
+        
+        <MDBRow className=" px-4 pt-4">
             
             <MDBCol sm="12">
-                <MDBTypography variant="display-4" className="text-center">TITLE</MDBTypography>
+                <MDBTypography variant="display-4" className="text-center">COMING SOON</MDBTypography>
             </MDBCol>
             {/* VIDEO */}
             <MDBCol sm="12" md="5">
@@ -21,9 +28,7 @@ const MovieDetails = () => {
                     Your browser does not support the video tag.
                 </video> */}
 
-                <Plyr 
-                    type="youtube" // or "vimeo"
-                    videoId='https://www.youtube.com/watch?v=osSJhXruEzU' />
+                <Plyr />
             </MDBCol>
 
             {/* DESCRIPTION */}
@@ -93,7 +98,53 @@ const MovieDetails = () => {
                     </MDBMedia>
                 </MDBTypography>
             </MDBCol>
-        </MDBRow>
+        
+            
+            <MDBCol className="">
+                    <MDBTypography className="text-center" variant="h4">Recommended based on your selection</MDBTypography>
+                    <MDBRow className="py-5">
+                        
+                    <MDBCol sm="12" md="4">
+                            <MDBView hover zoom>
+                            <img
+                                src={mulan}
+                                className="img-fluid"
+                                alt=""
+                            />
+                            <MDBMask className="flex-center">
+                                <p className="white-text">Zoom effect</p>
+                            </MDBMask>
+                            </MDBView>
+                    </MDBCol>
+                    
+                    <MDBCol sm="12" md="4">
+                            <MDBView hover zoom>
+                            <img
+                                src={marvel}
+                                className="img-fluid"
+                                alt=""
+                            />
+                            <MDBMask className="flex-center">
+                                <p className="white-text">Zoom effect</p>
+                            </MDBMask>
+                            </MDBView>
+                    </MDBCol>
+                    
+                        <MDBCol sm="12" md="4">
+                            <MDBView hover zoom>
+                            <img
+                                src={war}
+                                className="img-fluid"
+                                alt=""
+                            />
+                            <MDBMask className="flex-center">
+                                <p className="white-text">Zoom effect</p>
+                            </MDBMask>
+                            </MDBView>
+                        </MDBCol>
+                        </MDBRow>
+            </MDBCol>
+        </MDBRow></div>
         
   )
 }

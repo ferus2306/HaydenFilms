@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard'
 
 import MovieDetails from './components/MovieDetails'
 import Footer from './components/Footer'
+// import DataContextProvider from './assets/contexts/DataContext';
 
 
 function App() {
@@ -11,9 +12,11 @@ function App() {
 
     <Router>
       <div className="App">
-        <Route exact path='/' component={Dashboard}></Route>
         
-        <Route path='/details/:id' component={MovieDetails}></Route>
+          <Route exact path='/' component={Dashboard}></Route>
+          <Route path='/details/' component={MovieDetails}></Route>
+          <Route path='/details/:id' component={MovieDetails}></Route>
+        
         <Footer />
       </div>
     </Router>
