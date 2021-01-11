@@ -14,7 +14,6 @@ function App() {
       <div className="App">
           <Route exact path='/' component={Dashboard}></Route>
           <Route exact path='/details/' component={MovieDetails}></Route>
-          
         <Footer />
       </div>
     </Router>
